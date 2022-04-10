@@ -8,6 +8,10 @@ function sleep(ms) {
   });
 }
 
-const Utils = { getDice, sleep }
+function getMentionFromUser(userId) {
+  return `<@${userId}>`
+}
+
+const Utils = { getDice, sleep, getMentionFromUser }
 
 module.exports = Utils;
