@@ -17,10 +17,16 @@ const countBuilder = new SlashCommandBuilder()
       .addStringOption(stringOption => stringOption.setName('카드명').setDescription('카드명을 입력합니다.').setRequired(true))
       .addNumberOption(countOption => countOption.setName('카운트').setDescription('카운트를 입력받습니다.').setRequired(true));
 
+const dualBuilder = new SlashCommandBuilder()
+      .setName('듀얼')
+      .setDescription('라이프 포인트를 계산합니다.')
+      .addUserOption(userOption => userOption.setName('상대').setDescription('듀얼할 상대를 선택합니다.').setRequired(true))
+
 const commandBuilders = [
   diceBuilder,
   coinBuilder,
   countBuilder,
+  dualBuilder
 ];
 
 const commands = commandBuilders.map(builder => new CustomCommand(builder).command);

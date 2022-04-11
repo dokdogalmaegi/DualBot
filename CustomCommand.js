@@ -1,7 +1,7 @@
 const { SlashCommandBuilder } = require('@discordjs/builders')
 
 class CustomCommand {
-  #slashCommand
+  #slashCommand;
 
   constructor(CustomBuilder) {
     if (!CustomBuilder) throw 'Do not exists Custom Builder parameter.';
